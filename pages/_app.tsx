@@ -39,7 +39,7 @@ function App({ Component, props }): ReactElement {
     // <Provider store={store}>
     <>
       <Head>
-        <title>Mega Console - Agent UI</title>
+        <title>Trending Tools</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <Component {...props} />
