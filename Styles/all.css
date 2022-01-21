@@ -1,0 +1,987 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-Light.woff2') format('woff2'),
+        url('../fonts/Montserrat-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-Italic.woff2') format('woff2'),
+        url('../fonts/Montserrat-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-ExtraLightItalic.woff2') format('woff2'),
+        url('../fonts/Montserrat-ExtraLightItalic.woff') format('woff');
+    font-weight: 200;
+    font-style: italic;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-SemiBold.woff2') format('woff2'),
+        url('../fonts/Montserrat-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-LightItalic.woff2') format('woff2'),
+        url('../fonts/Montserrat-LightItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-Medium.woff2') format('woff2'),
+        url('../fonts/Montserrat-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-MediumItalic.woff2') format('woff2'),
+        url('../fonts/Montserrat-MediumItalic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-Regular.woff2') format('woff2'),
+        url('../fonts/Montserrat-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-SemiBoldItalic.woff2') format('woff2'),
+        url('../fonts/Montserrat-SemiBoldItalic.woff') format('woff');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-Black.woff2') format('woff2'),
+        url('../fonts/Montserrat-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-ThinItalic.woff2') format('woff2'),
+        url('../fonts/Montserrat-ThinItalic.woff') format('woff');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-Bold.woff2') format('woff2'),
+        url('../fonts/Montserrat-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-Thin.woff2') format('woff2'),
+        url('../fonts/Montserrat-Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-BlackItalic.woff2') format('woff2'),
+        url('../fonts/Montserrat-BlackItalic.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-ExtraBoldItalic.woff2') format('woff2'),
+        url('../fonts/Montserrat-ExtraBoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-ExtraBold.woff2') format('woff2'),
+        url('../fonts/Montserrat-ExtraBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-ExtraLight.woff2') format('woff2'),
+        url('../fonts/Montserrat-ExtraLight.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-BoldItalic.woff2') format('woff2'),
+        url('../fonts/Montserrat-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?puuc3s');
+  src:  url('../fonts/icomoon.eot?puuc3s#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?puuc3s') format('truetype'),
+    url('../fonts/icomoon.woff?puuc3s') format('woff'),
+    url('../fonts/icomoon.svg?puuc3s#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-upload-cloud:before {
+  content: "\e909";
+}
+.icon-download-cloud:before {
+  content: "\e902";
+}
+.icon-adjust:before {
+  content: "\e900";
+}
+.icon-attachment:before {
+  content: "\e901";
+}
+.icon-browser:before {
+  content: "\e903";
+}
+.icon-chevron-circle-right:before {
+  content: "\e904";
+}
+.icon-chevron-thin-down:before {
+  content: "\e905";
+}
+.icon-collapse:before {
+  content: "\e906";
+}
+.icon-document:before {
+  content: "\e907";
+}
+.icon-documents:before {
+  content: "\e908";
+}
+.icon-dropbox:before {
+  content: "\e90b";
+}
+.icon-envelope:before {
+  content: "\e90c";
+}
+.icon-facebook-f:before {
+  content: "\e90d";
+}
+.icon-file-empty:before {
+  content: "\e90e";
+}
+.icon-file-picture:before {
+  content: "\e90f";
+}
+.icon-file-play:before {
+  content: "\e910";
+}
+.icon-files:before {
+  content: "\e911";
+}
+.icon-focus:before {
+  content: "\e912";
+}
+.icon-google-plus-g:before {
+  content: "\e913";
+}
+.icon-images:before {
+  content: "\e914";
+}
+.icon-lamp5:before {
+  content: "\e915";
+}
+.icon-layers:before {
+  content: "\e916";
+}
+.icon-picture:before {
+  content: "\e917";
+}
+.icon-pinterest-p:before {
+  content: "\e918";
+}
+.icon-recycle:before {
+  content: "\e919";
+}
+.icon-stack:before {
+  content: "\e91a";
+}
+.icon-support:before {
+  content: "\e91b";
+}
+.icon-trashcan:before {
+  content: "\e91c";
+}
+.icon-twitter:before {
+  content: "\e91d";
+}
+.icon-upload:before {
+  content: "\e91e";
+}
+.icon-world:before {
+  content: "\e920";
+}
+.icon-youtube:before {
+  content: "\e921";
+}
+.icon-search:before {
+  content: "\e986";
+}
+.icon-plus:before {
+  content: "\ea0a";
+}
+.icon-minus:before {
+  content: "\ea1e";
+}
+.icon-loop:before {
+  content: "\ea2d";
+}
+.icon-loop2:before {
+  content: "\ea2e";
+}
+body {
+  font-family: 'Montserrat';
+  background: #F8F8F8;
+}
+.btn-outline-success {
+  position: absolute;
+  right: 10px;
+  top: 2px;
+  border: none;
+}
+#header {
+  background: #fff;
+  overflow: hidden;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  margin-bottom: 30px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 9;
+}
+/*#header.header-active {
+
+}*/
+.navbar-expand-lg .navbar-nav {
+  font-family: 'Montserrat';
+  font-weight: 500;
+}
+.navbar-light .navbar-nav .nav-link {
+  color: #000;
+  text-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);;
+}
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .show>.nav-link {
+  color: #970000;
+}
+.header-search {
+  width: 400px;
+  position: relative;
+}
+.navbar{
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.btn-outline-success:hover {
+    color: #970000;
+    background-color: transparent;
+    border-color: transparent;
+}
+.nav-pills .nav-link {
+  background-color: #EBEBEB;
+  padding: 20px;
+  border-radius: 0;
+  border: 1px solid #ccc;
+}
+.nav-pills .nav-link:hover {
+  background: #fff;
+}
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+  background-color: #fff;
+  border-right-color: transparent;
+}
+.nav-pills .nav-link span {
+  display: block;
+
+}
+.tab-holder .tab-content {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-left: none;
+  max-height: 732px;
+  background: #fff;
+}
+.tab-content {
+  overflow-y: auto;
+  padding: 30px 20px;
+}
+.tab-pane h1 {
+  font-size: 20px;
+  line-height: 25px;
+  font-family: 'Montserrat';
+  text-align: center;
+  position: relative;
+  max-width: 500px;
+  margin: 0 auto 10px;
+}
+.tab-pane h1:after {
+  height: 3px;
+  width: 150px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  content: "";
+  background: #000;
+  margin-top: -2px;
+}
+.tab-pane h1:before {
+  height: 3px;
+  width: 150px;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  content: "";
+  background: #000;
+  margin-top: -2px;
+}
+.tab-pane ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.tab-pane ul li {
+  padding-left: 30px;
+  margin-bottom: 9px;
+  font-size: 16px;
+}
+.tab-pane ul li a {
+  text-decoration: none;
+  position: relative;
+  color: #000;
+}
+.tab-pane ul li a:hover {
+  color: #970000;
+}
+.tab-pane ul li a:after {
+  position: absolute;
+  left: -30px;
+  top: 50%;
+  content: "\e904";
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin-top: -10px;
+
+}
+.tab-holder {
+  margin-bottom: 30px;
+  padding-top: 100px;
+}
+.tabicon {
+  font-size: 25px;
+  color: #000;
+  margin-bottom: 20px;
+}
+.tab-text {
+  font-size: 16px;
+  line-height: 30px;
+  color: #000;
+  font-weight: 600;
+}
+.sp-feature {
+  background: #484848;
+  padding: 30px 0;
+  margin-bottom: 30px;
+}
+.sp-feature h2 {
+  font-size: 22px;
+  line-height: 25px;
+  font-family: 'Montserrat';
+  text-align: center;
+  position: relative;
+  max-width: 500px;
+  margin: 0 auto 30px;
+  color: #fff;
+}
+.sp-feature h2:after {
+  height: 3px;
+  width: 150px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  content: "";
+  background: #fff;
+  margin-top: -2px;
+}
+.sp-feature h2:before {
+  height: 3px;
+  width: 150px;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  content: "";
+  background: #fff;
+  margin-top: -2px;
+}
+.feather-area {
+  background: #3c3c3c;
+  border-top: 5px solid #BEF4F6;
+  border-radius: 30px 0 30px 0;
+  text-align: center;
+  color: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+.feather-area .circle {
+  height: 60px;
+  width: 60px;
+  border-radius: 100%;
+  background: #BEF4F6;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  margin: -24px -20px;
+}
+.feather-area h3 {
+  font-size: 20px;
+  line-height: 25px;
+}
+.feather-area .circle .icon-sp {
+  font-size: 26px;
+  color: #000;
+}
+.feather-area.green {
+  border-color: #C3F591;
+}
+.feather-area.green .circle {
+  background: #C3F591;
+}
+
+.feather-area.blue {
+  border-color: #BED3F6;
+}
+.feather-area.blue .circle {
+  background: #BED3F6;
+}
+
+.feather-area.pink {
+  border-color: #F6BEBE;
+}
+.feather-area.pink .circle {
+  background: #F6BEBE;
+}
+
+
+.feather-area.perpal {
+  border-color: #D8BEF6;
+}
+.feather-area.perpal .circle {
+  background: #D8BEF6;
+}
+.howitwork {
+  overflow: hidden;
+  padding: 30px 20px;
+  margin-bottom: 30px;
+}
+.howitwork h2 {
+  font-size: 22px;
+  line-height: 25px;
+  font-family: 'Montserrat';
+  text-align: center;
+  position: relative;
+  max-width: 500px;
+  margin: 0 auto 30px;
+  color: #000;
+}
+.howitwork h2:after {
+  height: 3px;
+  width: 150px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  content: "";
+  background: #000;
+  margin-top: -2px;
+}
+.howitwork h2:before {
+  height: 3px;
+  width: 150px;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  content: "";
+  background: #000;
+  margin-top: -2px;
+}
+.work-view {
+  max-width: 900px;
+  margin: 0 auto 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.work-view span {
+  height: 90px;
+  width: 90px;
+  border: 1px solid #ccc;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  line-height: 30px;
+  font-weight: 600;
+  background: #fff;
+}
+.work-view span.active {
+  background: #00AF2F;
+  color: #fff;
+}
+.work-view .start {
+  margin-right: auto;
+}
+.work-view .end {
+  margin-left: auto;
+}
+.work-view .line {
+  display: block;
+  width: 100%;
+  height: 15px;
+  background: #707070;
+  border-radius: 0;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: -1;
+  margin-top: -8px;
+}
+.work-math {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.work-math .btn-area{
+  border: 1px solid #ccc;
+  padding: 10px 20px;
+  width: 88%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 45px;
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: inset 0 3px 6px rgb(0, 0, 0, 0.1);
+}
+.work-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 24%;
+  margin: 0 5%;
+
+}
+.work-area .ionwork {
+  margin-left: auto;
+  font-size: 28px;
+  color: #727272;
+}
+.work-area .ionwork.icon-chevron-thin-down {
+  font-size: 12px;
+}
+.work-area .subtittle {
+  display: block;
+  font-size: 12px;
+  line-height: 15px;
+  color: #858585;
+}
+.footer-content .footer-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.footer-content{
+  padding: 20px 0;
+  background: #f5f5f5;
+}
+.footer-content .footer-list li {
+  margin-bottom: 10px;
+}
+.footer-content .footer-list li a {
+  color: #000;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 18px;
+}
+.footer-content .footer-list li a:hover {
+  color: #970000;
+}
+#footer {
+  background: #515151;
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+}
+#footer p {
+  margin: 0;
+  color: #fff;
+  float: left;
+}
+#footer p a {
+  text-decoration: none;
+  color: #fff;
+}
+#footer p a:hover {
+  color: #970000;
+}
+#footer ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  float: right;
+}
+#footer ul li {
+  float: left;
+  margin: 0 10px;
+}
+#footer ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+#footer ul li a:hover {
+  color: #970000;
+}
+.sidebar {
+  position: fixed;
+  height: calc(100% - 70px);
+  width: 400px;
+  top: 70px;
+  left: 0;
+  background: #fff;
+  overflow: auto;
+  z-index: 1;
+  box-shadow: 0 3px 6px rgb(0 0 0 / 16%);
+}
+.accordion-body ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.accordion-body ul li {
+  margin-bottom: 10px;
+}
+.accordion-body ul li a {
+  padding-left: 30px;
+  text-decoration: none;
+  position: relative;
+  color: #000;
+}
+.accordion-body ul li a:hover {
+  color: #970000;
+
+}
+.accordion-body ul li a:after {
+  position: absolute;
+  left: 0px;
+  top: 50%;
+  content: "\e904";
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin-top: -10px;
+}
+.accordion-button:not(.collapsed) {
+  color: #000;
+  background-color: #f8f8f8;
+  font-family: 'Montserrat';
+  font-weight: 500;
+}
+.accordion-button:not(.collapsed)::after {
+  background-image: url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e);
+}
+.accordion-button:before {
+  position: absolute;
+  left: 25px;
+  top: 50%;
+  height: 20px;
+  width: 4px;
+  background: #000;
+  content: "";
+  margin: -10px 0 0;
+}
+.accordion-button{
+  padding: 1rem 2.05rem 1rem 3.05rem;
+}
+.main-container {
+  overflow: hidden;
+  padding: 100px 20px 100px 430px;
+}
+.heading-area {
+  max-width: 550px;
+  margin: 0 auto;
+  text-align: center;
+}
+.heading-area h1 {
+  font-size: 20px;
+    line-height: 25px;
+    font-family: 'Montserrat';
+    text-align: center;
+    position: relative;
+    max-width: 550px;
+    margin: 0 auto 10px;
+}
+.heading-area h1:after {
+  height: 3px;
+    width: 150px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    content: "";
+    background: #000;
+    margin-top: -2px;
+}
+.heading-area h1:before {
+  height: 3px;
+    width: 150px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    content: "";
+    background: #000;
+    margin-top: -2px;
+}
+.heading-area p {
+  font-size: 14px;
+}
+.heading-area p strong a {
+  color: #970000;
+  text-decoration: none;
+}
+.heading-area p strong a:hover {
+  color: #003D6B;
+}
+.step-holder .accordion-button:before {
+  display: none;
+} 
+.step-holder .accordion-item {
+  border: none;
+  background: transparent;
+}
+.step-holder .accordion-button {
+  background-color: transparent;
+  border-bottom: 1px solid #ccc;
+  padding: 1rem 0.45rem 1rem 0;
+
+}
+.step-holder .tab-content {
+  border-top: none;
+  padding: 10px 15px;
+  border: 1px solid #dee2e6;
+  border-top: none;
+  background: #F5F5F5;
+}
+.step-holder .nav-tabs .nav-item.show .nav-link, 
+.step-holder .nav-tabs .nav-link.active {
+  background: #F5F5F5;
+  border-color: #dee2e6 #dee2e6 #F5F5F5;
+}
+.nav-tabs .nav-link .icon-world,
+.nav-tabs .nav-link .icon-attachment,
+.nav-tabs .nav-link .icon-stack {
+  margin-right: 15px;
+  font-size: 20px;
+}
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+  color: #000;
+}
+.step-holder .nav-link {
+  color: #000;
+  background: #fff;
+  margin-right: 10px;
+}
+.step-holder .tab-content textarea.form-control {
+  border: none;
+  background: transparent;
+  color: #000;
+  padding: 0;
+  border-radius: 0;
+}
+.buttonarea {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 20px 0;
+}
+.buttonarea .btn {
+  color: #fff;
+  background: #003D6B;
+  margin-left: 10px;
+  border-radius: 4px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16);
+}
+.buttonarea .btn:hover{
+  background: #00589b;
+}
+.buttonarea .btn span {
+  margin-right: 15px;
+}
+.step-holder .input-group-text {
+  background: #003D6B;
+  color: #fff;
+}
+.form-box {
+  padding: 20px;
+  background: #F5F5F5;
+  border: 1px solid #ccc;
+}
+.i-text {
+  display: block;
+  margin-bottom: 10px;
+  color: #545454;
+  font-weight: 600;
+}
+.buttonarea.accor-last {
+  justify-content: flex-start;
+  padding: 0;
+  margin-bottom: 20px;
+}
+.buttonarea.accor-last .btn {
+  margin-right: 10px;
+  margin-left: 0;
+}
+.accordion-button:not(.collapsed) {
+  box-shadow: none;
+}
+.step-holder .accordion-body {
+    padding: 1rem 0;
+}
+.step-holder .accordion-button:not(.collapsed) {
+  padding-left: 0;
+}
+@media screen and (max-width: 991px) {
+  .feather-area {
+    width: 100%;
+  }
+  .work-math .btn-area {
+    width: 100%;
+    font-size: 12px;
+  }
+  .work-area {
+    width: 33%;
+    margin: 0 1% 0 0;
+  }
+  .sidebar {
+    width: 300px;
+  }
+  .main-container {
+    padding: 100px 20px 100px 310px;
+  }
+  .heading-area h1:before,
+  .heading-area h1:after {
+    width: 100px;
+  }
+}
+@media screen and (max-width: 768px){
+  .tab-pane h1:after,
+  .tab-pane h1:before {
+    width: 60px;
+  }
+  .work-view span {
+    height: 60px;
+    width: 60px;
+    font-size: 22px;
+  }
+  .work-view .line {
+    height: 10px;
+    margin-top: -5px;
+  }
+  .work-math .btn-area {
+    padding: 7px 5px;
+    height: 35px;
+  }
+  .work-area .ionwork {
+    font-size: 20px;
+  }
+  .work-area .ionwork.icon-chevron-thin-down {
+    font-size: 8px;
+  }
+  .work-area {
+    width: 33%;
+    margin: 0 3% 0 0;
+  } 
+  .work-area .subtittle {
+    text-align: center;
+  }
+  .sp-feature h2:after,
+  .sp-feature h2:before,
+  .howitwork h2:after,
+  .howitwork h2:before {
+    width: 100px;
+  }
+
+}
+@media screen and (max-width: 768px){
+  .tab-pane h1:after, .tab-pane h1:before {
+      width: 30px;
+  }
+}
