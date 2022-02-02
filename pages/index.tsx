@@ -1,4 +1,4 @@
-import AppHeader from "@components/Shared/header";
+import HomePage from "@components/pages/Home";
 import Head from "next/head";
 
 export default function Home() {
@@ -8,7 +8,7 @@ export default function Home() {
         <title>Trending Tools</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Home />
+      <HomePage />
     </div>
   );
 }
