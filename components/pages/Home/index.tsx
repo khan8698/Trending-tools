@@ -47,14 +47,15 @@ const HomePage: FC = () => {
                     id={`v-pills-${t.split(" ").join("_")}`}
                     role="tabpanel"
                     aria-labelledby={`${t.split(" ").join("_")}-tab`}
+                    key={i}
                   >
                     {/* <div className="heading">
                       <h1>Conversion Tools</h1>
                     </div> */}
                     <ul>
-                      {data[t].data.map((d) => {
+                      {data[t].data.map((d, j) => {
                         return (
-                          <li>
+                          <li key={j}>
                             <a href={`${d.route || "#"}`}>{d.title}</a>
                           </li>
                         );

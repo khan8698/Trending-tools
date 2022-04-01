@@ -32,7 +32,7 @@ const Converters: FC = () => {
       <AppHeader />
       <AppLeftBar />
       <div className="main-container">
-        <div className="heading-area">
+        {/* <div className="heading-area">
           <h1>Convert CSV to JSON</h1>
           <p>
             Your delimited data must have a longitude and latitude. We will
@@ -46,7 +46,7 @@ const Converters: FC = () => {
               <a href=""> CSV to KML</a>
             </strong>
           </p>
-        </div>
+        </div> */}
         <StepProgressBar
           startingStep={0}
           onSubmit={onFormSubmit}
