@@ -1,7 +1,7 @@
 // FormElements.jsx
 
-import React from "react";
-import { Field, ErrorMessage } from "formik";
+import React from 'react';
+import { Field, ErrorMessage } from 'formik';
 
 export function SelectField(props: any) {
   const { name, label, options } = props;
@@ -11,12 +11,16 @@ export function SelectField(props: any) {
       <Field as="select" id={name} name={name}>
         <option value="">Choose...</option>
         {options.map((optn: any, index: number) => (
-          <option value={optn.value} label={optn.label || optn.value} />
+          <option
+            key={optn.value}
+            value={optn.value}
+            label={optn.label || optn.value}
+          />
         ))}
       </Field>
       <ErrorMessage
         name={name}
-        render={(msg) => <div style={{ color: "red" }}>{msg}</div>}
+        render={msg => <div style={{ color: 'red' }}>{msg}</div>}
       />
     </>
   );
