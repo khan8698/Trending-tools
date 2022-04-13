@@ -722,17 +722,22 @@ body {
 .accordion-body ul li {
   margin-bottom: 10px;
 }
-.accordion-body ul li a {
+.accordion-body ul li span {
   padding-left: 30px;
   text-decoration: none;
   position: relative;
   color: #000;
+  cursor: pointer;
 }
-.accordion-body ul li a:hover {
-  color: #970000;
 
+.accordion-body ul li .active__tool{
+  color: #970000;
 }
-.accordion-body ul li a:after {
+
+.accordion-body ul li span:hover{
+  color: #970000;
+}
+.accordion-body ul li span:after {
   position: absolute;
   left: 0px;
   top: 50%;

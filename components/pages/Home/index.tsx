@@ -1,9 +1,9 @@
 /* eslint-disable @typescript-eslint/camelcase */
-import AppHeader from "@components/Shared/header";
-import React, { FC } from "react";
+import AppHeader from '@components/Shared/header';
+import React, { FC } from 'react';
 
-import data from "@data/ToolsList";
-import AppFooter from "@components/Shared/Footer";
+import data from '@data/ToolsList';
+import AppFooter from '@components/Shared/Footer';
 
 const HomePage: FC = () => {
   return (
@@ -22,13 +22,13 @@ const HomePage: FC = () => {
                 return (
                   <button
                     key={i}
-                    className={`nav-link ${data[t].active ? "active" : ""}`}
-                    id={`${t.split(" ").join("_")}-tab`}
+                    className={`nav-link ${data[t].active ? 'active' : ''}`}
+                    id={`${t.split(' ').join('_')}-tab`}
                     data-bs-toggle="pill"
-                    data-bs-target={`#v-pills-${t.split(" ").join("_")}`}
+                    data-bs-target={`#v-pills-${t.split(' ').join('_')}`}
                     type="button"
                     role="tab"
-                    aria-controls={`v-pills-${t.split(" ").join("_")}`}
+                    aria-controls={`v-pills-${t.split(' ').join('_')}`}
                     aria-selected="true"
                   >
                     <span className={`tabicon ${data[t].icon}`}></span>
@@ -42,11 +42,11 @@ const HomePage: FC = () => {
                 return (
                   <div
                     className={`tab-pane fade${
-                      data[t].active ? " show active" : ""
+                      data[t].active ? ' show active' : ''
                     }`}
-                    id={`v-pills-${t.split(" ").join("_")}`}
+                    id={`v-pills-${t.split(' ').join('_')}`}
                     role="tabpanel"
-                    aria-labelledby={`${t.split(" ").join("_")}-tab`}
+                    aria-labelledby={`${t.split(' ').join('_')}-tab`}
                     key={i}
                   >
                     {/* <div className="heading">
@@ -56,7 +56,7 @@ const HomePage: FC = () => {
                       {data[t].data.map((d, j) => {
                         return (
                           <li key={j}>
-                            <a href={`${d.route || "#"}`}>{d.title}</a>
+                            <a href={`${d.route || '#'}`}>{d.title}</a>
                           </li>
                         );
                       })}
@@ -192,14 +192,14 @@ const HomePage: FC = () => {
             </div>
             <div className="work-area">
               <span className="btn-area mb-3">
-                Upload File{" "}
+                Upload File{' '}
                 <span className="ionwork icon-chevron-thin-down"></span>
               </span>
               <span className="subtittle">Or choose a different format</span>
             </div>
             <div className="work-area">
               <span className="btn-area mb-2">
-                Download File{" "}
+                Download File{' '}
                 <span className="ionwork icon-download-cloud"></span>
               </span>
               <span className="subtittle">
