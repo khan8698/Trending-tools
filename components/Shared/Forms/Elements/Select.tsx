@@ -8,7 +8,7 @@ export function SelectField(props: any) {
   return (
     <>
       {label && <label htmlFor={name}>{label}</label>}
-      <Field as="select" id={name} name={name}>
+      <Field className="form-control" as="select" id={name} name={name}>
         <option value="">Choose...</option>
         {options.map((optn: any, index: number) => (
           <option
