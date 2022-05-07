@@ -20,6 +20,7 @@ interface Props {
   step3: any;
   activeStep: number;
   setActiveStep: (value: number | Func) => void;
+  nextBtnActive: boolean;
 }
 
 export default function StepperMaterial({
@@ -27,7 +28,8 @@ export default function StepperMaterial({
   step2,
   step3,
   activeStep,
-  setActiveStep
+  setActiveStep,
+  nextBtnActive
 }: Props) {
   //   const [activeStep, setActiveStep] = useState(0);
   const [skipped, setSkipped] = useState(new Set<number>());
@@ -129,7 +131,10 @@ export default function StepperMaterial({
                   Skip
                 </Button>
               )}
-              <Button onClick={values => handleNext(values)}>
+              <Button
+                disabled={nextBtnActive}
+                onClick={values => handleNext(values)}
+              >
                 {activeStep === steps.length - 1 ? 'Finish' : 'Next'}
               </Button>
             </Box>
