@@ -9,7 +9,11 @@ type InputData = {
   inputAsFile: File | string;
 };
 
-const InputHandler: FC = props => {
+interface Props {
+  onSubmitInputData: (item: any) => void;
+}
+
+const InputHandler = ({ onSubmitInputData }: Props) => {
   const [inputData, setInputData] = useState<InputData>({
     inputAsText: '',
     inputAsURL: '',
@@ -19,11 +23,21 @@ const InputHandler: FC = props => {
     console.log(values);
     onSubmitProps.setSubmitting(false);
     onSubmitProps.resetForm();
+    onSubmitInputData(values);
   };
 
   const validationSchema = Yup.object({
     inputAsText: Yup.string().required('Required')
   });
+
+  const clearAllValuesOnTabShifting = () => {
+    setInputData({
+      inputAsText: '',
+      inputAsURL: '',
+      inputAsFile: ''
+    });
+    onSubmitInputData(inputData);
+  };
   return (
     <>
       <Formik
@@ -46,6 +60,7 @@ const InputHandler: FC = props => {
                       role="tab"
                       aria-controls="nav-home"
                       aria-selected="true"
+                      onClick={clearAllValuesOnTabShifting}
                     >
                       <span className="icon-stack"></span>Enter Data
                     </button>
@@ -58,6 +73,7 @@ const InputHandler: FC = props => {
                       role="tab"
                       aria-controls="nav-profile"
                       aria-selected="false"
+                      onClick={clearAllValuesOnTabShifting}
                     >
                       <span className="icon-world"></span>Enter URL
                     </button>
@@ -70,6 +86,7 @@ const InputHandler: FC = props => {
                       role="tab"
                       aria-controls="nav-contact"
                       aria-selected="false"
+                      onClick={clearAllValuesOnTabShifting}
                     >
                       <span className="icon-attachment"></span>Choose File
                     </button>
@@ -89,7 +106,7 @@ const InputHandler: FC = props => {
                       onChange={handleChange}
                       value={values.inputAsText}
                     />
-                    <SubmitButton title="GET DATA" />
+                    <SubmitButton title="Submit Data" />
                   </div>
                   <div
                     className="tab-pane fade"
@@ -112,7 +129,7 @@ const InputHandler: FC = props => {
                         value={values.inputAsURL}
                       />
 
-                      <SubmitButton title="GET DATA" />
+                      <SubmitButton title="Submit Data" />
                     </div>
                   </div>
                   <div
@@ -135,7 +152,7 @@ const InputHandler: FC = props => {
                         }}
                       />
                     </div>
-                    <SubmitButton title="GET DATA" />
+                    <SubmitButton title="Submit Data" />
                   </div>
                 </div>
               </form>

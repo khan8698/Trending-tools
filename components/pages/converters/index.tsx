@@ -7,16 +7,11 @@ import AppFileDownloader from '@components/Shared/FileDownloader';
 import { JsonFormArray } from '@data/JsonFormData';
 import StepperMaterial from '@components/Shared/stepper/Stepper';
 
-const steps = [
-  'Select campaign settings',
-  'Create an ad group',
-  'Create an ad'
-];
-
 export default function HorizontalLinearStepper() {
   const [activeTab, setActiveTab] = useState(JsonFormArray[0].id);
   const [toolName, setToolName] = useState(JsonFormArray[0].toolName);
   const [activeStep, setActiveStep] = useState(0);
+  const [nextBtnActive, setNextBtnActive] = useState(true);
 
   let jsonForm = JsonFormArray.filter(
     json => activeTab === json.id && toolName === json.toolName
@@ -29,11 +24,23 @@ export default function HorizontalLinearStepper() {
     );
   }, [activeTab, toolName]);
 
+  const onSubmitInputData = (inputData: any) => {
+    if (
+      inputData.inputAsText ||
+      inputData.inputAsURL ||
+      inputData.inputAsFile
+    ) {
+      setNextBtnActive(false);
+    } else {
+      setNextBtnActive(true);
+    }
+  };
+
   return (
     <div className="wrapper">
       <AppHeader />
       <AppLeftBar
-        onNavigationHandler={subItem => {
+        onNavigationHandler={(subItem: any) => {
           setActiveStep(0);
           setActiveTab(subItem.id);
           setToolName(subItem.title);
@@ -41,11 +48,12 @@ export default function HorizontalLinearStepper() {
       />
       <div className="main-container">
         <StepperMaterial
-          step1={<InputHandler />}
+          step1={<InputHandler onSubmitInputData={onSubmitInputData} />}
           step2={<ConverterOptionsSelector formSchema={data?.formSchema} />}
           step3={<AppFileDownloader />}
           activeStep={activeStep}
           setActiveStep={setActiveStep}
+          nextBtnActive={nextBtnActive}
         />
       </div>
     </div>
