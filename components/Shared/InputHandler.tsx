@@ -22,7 +22,7 @@ const InputHandler = ({ onSubmitInputData }: Props) => {
   const onSubmit = (values: any, onSubmitProps: any) => {
     console.log(values);
     onSubmitProps.setSubmitting(false);
-    onSubmitProps.resetForm();
+    // onSubmitProps.resetForm();
     onSubmitInputData(values);
   };
 

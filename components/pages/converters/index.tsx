@@ -7,22 +7,30 @@ import AppFileDownloader from '@components/Shared/FileDownloader';
 import { JsonFormArray } from '@data/JsonFormData';
 import StepperMaterial from '@components/Shared/stepper/Stepper';
 
+import { useAppSelector } from '@hooks/useAppSelector';
+import { useAppDispatch } from '@hooks/useAppDispatch';
+import { setActiveTool, setToolName } from 'toolkitStore/convertersSlice';
+
 export default function HorizontalLinearStepper() {
-  const [activeTab, setActiveTab] = useState(JsonFormArray[0].id);
-  const [toolName, setToolName] = useState(JsonFormArray[0].toolName);
+  // const [activeTab, setActiveTab] = useState(JsonFormArray[0].id);
+  // const [toolName, setToolName] = useState(JsonFormArray[0].toolName);
+
   const [activeStep, setActiveStep] = useState(0);
   const [nextBtnActive, setNextBtnActive] = useState(true);
 
+  const { toolName, activeTool } = useAppSelector(state => state.converters);
+  const dispatch = useAppDispatch();
+
   let jsonForm = JsonFormArray.filter(
-    json => activeTab === json.id && toolName === json.toolName
+    json => activeTool === json.id && toolName === json.toolName
   );
   let [data] = jsonForm;
 
   useEffect(() => {
     jsonForm = JsonFormArray.filter(
-      json => activeTab === json.id && toolName === json.toolName
+      json => activeTool === json.id && toolName === json.toolName
     );
-  }, [activeTab, toolName]);
+  }, [activeTool, toolName]);
 
   const onSubmitInputData = (inputData: any) => {
     if (
@@ -42,8 +50,11 @@ export default function HorizontalLinearStepper() {
       <AppLeftBar
         onNavigationHandler={(subItem: any) => {
           setActiveStep(0);
-          setActiveTab(subItem.id);
-          setToolName(subItem.title);
+          setNextBtnActive(true);
+          dispatch(setActiveTool(subItem.id));
+          dispatch(setToolName(subItem.title));
+          // setActiveTab(subItem.id);
+          // setToolName(subItem.title);
         }}
       />
       <div className="main-container">
