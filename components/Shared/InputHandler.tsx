@@ -2,6 +2,7 @@ import { Field, Formik } from 'formik';
 import React, { FC, useState } from 'react';
 import { Form, SubmitButton, TextField } from './Forms/Elements';
 import * as Yup from 'yup';
+import { useGetJsonDataMutation } from '../../services/Post';
 
 type InputData = {
   inputAsText: string;
@@ -19,11 +20,19 @@ const InputHandler = ({ onSubmitInputData }: Props) => {
     inputAsURL: '',
     inputAsFile: ''
   });
-  const onSubmit = (values: any, onSubmitProps: any) => {
+
+  const [getData, data] = useGetJsonDataMutation();
+  console.log(data);
+
+  const onSubmit = async (values: any, onSubmitProps: any) => {
     console.log(values);
     onSubmitProps.setSubmitting(false);
     // onSubmitProps.resetForm();
     onSubmitInputData(values);
+
+    const inputFormData = new FormData();
+    inputFormData.append('text', values.inputAsText);
+    getData({ text: inputFormData });
   };
 
   const validationSchema = Yup.object({

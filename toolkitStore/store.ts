@@ -1,12 +1,19 @@
 import { configureStore } from '@reduxjs/toolkit';
+import { setupListeners } from '@reduxjs/toolkit/dist/query';
+import { postApi } from 'services/Post';
 import convertersSlice from './convertersSlice';
 // ...
 
 export const store = configureStore({
   reducer: {
-    converters: convertersSlice
-  }
+    converters: convertersSlice,
+    [postApi.reducerPath]: postApi.reducer
+  },
+  middleware: getDefaultMiddleware =>
+    getDefaultMiddleware().concat(postApi.middleware)
 });
+
+setupListeners(store.dispatch);
 
 // Infer the `RootState` and `AppDispatch` types from the store itself
 export type RootState = ReturnType<typeof store.getState>;
