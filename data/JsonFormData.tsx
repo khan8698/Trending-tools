@@ -1,3 +1,5 @@
+import {ConvertorsArray} from "./ToolsList"
+
 interface jsonFormArrayModel {
   id: number;
   toolName: string;
@@ -14,7 +16,7 @@ interface jsonFormArrayModel {
 export const JsonFormArray: jsonFormArrayModel[] = [
   {
     id: 1,
-    toolName: 'MS Word to PDF',
+    toolName: ConvertorsArray[0].data[0].title,
     formSchema: {
       name: {
         type: 'text',

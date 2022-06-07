@@ -211,9 +211,10 @@ export const ConvertorsArray: ConvertorsArrayModel[] = [
     data: [
       {
         id: 1,
-        title: 'MS Word to PDF',
+        title: 'CSV to SQL',
         route: ''
       },
+
       {
         id: 2,
         title: 'CSV to JSON',
@@ -221,187 +222,17 @@ export const ConvertorsArray: ConvertorsArrayModel[] = [
       },
       {
         id: 4,
-        title: 'CSV to HTML',
+        title: 'CSV to XML',
         route: ''
       },
       {
         id: 5,
-        title: 'CSV to SQL',
-        route: ''
-      },
-      {
-        id: 6,
-        title: 'Images to PDF',
-        route: ''
-      },
-      {
-        id: 7,
-        title: 'XML to XLSX',
-        route: ''
-      },
-      {
-        id: 8,
         title: 'CSV to XLSX',
         route: ''
       },
       {
-        id: 9,
-        title: 'HTML to PDF',
-        route: ''
-      },
-      {
-        id: 10,
-        title: 'CSV to Delimited',
-        route: ''
-      },
-      {
-        id: 11,
-        title: 'CSV to Flat File',
-        route: ''
-      },
-      {
-        id: 12,
-        title: 'CSV to GeoJSON',
-        route: ''
-      },
-      {
-        id: 13,
-        title: 'CSV to HTML Table',
-        route: ''
-      },
-      {
-        id: 14,
-        title: 'CSV to KML',
-        route: ''
-      },
-      {
-        id: 15,
-        title: 'CSV to Markdown',
-        route: ''
-      },
-      {
-        id: 16,
-        title: 'CSV to Multi-line Data',
-        route: ''
-      },
-      {
-        id: 17,
-        title: 'CSV to PDF',
-        route: ''
-      }
-    ]
-  },
-  {
-    id: 2,
-    active: false,
-    icon: 'icon-files',
-    itemName: 'Compressions',
-    data: [
-      {
-        id: 1,
-        title: 'Files compress/Decompress',
-        route: ''
-      }
-    ]
-  },
-  {
-    id: 3,
-    active: false,
-    icon: 'icon-files',
-    itemName: 'Image Tools',
-    data: [
-      {
-        id: 1,
-        title: 'Resize Image',
-        route: ''
-      },
-      {
-        id: 2,
-        title: 'Compress Image',
-        route: ''
-      },
-      {
-        id: 3,
-        title: 'Change background',
-        route: ''
-      },
-      {
-        id: 4,
-        title: 'Black & White Conversion',
-        route: ''
-      }
-    ]
-  },
-  {
-    id: 4,
-    active: false,
-    icon: 'icon-files',
-    itemName: 'Audio/Video Tools',
-    data: [
-      {
-        id: 1,
-        title: 'Resize Image',
-        route: ''
-      },
-      {
-        id: 2,
-        title: 'Compress Image',
-        route: ''
-      },
-      {
-        id: 3,
-        title: 'Change background',
-        route: ''
-      },
-      {
-        id: 4,
-        title: 'Black & White Conversion',
-        route: ''
-      }
-    ]
-  },
-  {
-    id: 5,
-    active: false,
-    icon: 'icon-files',
-    itemName: 'OCR Tools',
-    data: [
-      {
-        id: 1,
-        title: 'Image to text',
-        route: ''
-      }
-    ]
-  },
-  {
-    id: 6,
-    active: false,
-    icon: 'icon-files',
-    itemName: 'File Viewers',
-    data: [
-      {
-        id: 1,
-        title: 'Adobe related files',
-        route: ''
-      },
-      {
-        id: 2,
-        title: 'SQL Files',
-        route: ''
-      },
-      {
-        id: 3,
-        title: 'Office. PDF',
-        route: ''
-      },
-      {
-        id: 4,
-        title: 'JSON, XML. CSV',
-        route: ''
-      },
-      {
-        id: 5,
-        title: 'Video,Images Audio',
+        id: 6,
+        title: 'JSON to CSV',
         route: ''
       }
     ]

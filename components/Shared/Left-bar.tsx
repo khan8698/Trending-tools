@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/camelcase */
 import React, { FC, useState } from 'react';
 import { ConvertorsArray } from '@data/ToolsList';
 

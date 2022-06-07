@@ -1,16 +1,16 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { setupListeners } from '@reduxjs/toolkit/dist/query';
-import { postApi } from 'services/Post';
+import { convertApi } from 'services/ConverterApi';
 import convertersSlice from './convertersSlice';
 // ...
 
 export const store = configureStore({
   reducer: {
     converters: convertersSlice,
-    [postApi.reducerPath]: postApi.reducer
+    [convertApi.reducerPath]: convertApi.reducer
   },
   middleware: getDefaultMiddleware =>
-    getDefaultMiddleware().concat(postApi.middleware)
+    getDefaultMiddleware().concat(convertApi.middleware)
 });
 
 setupListeners(store.dispatch);

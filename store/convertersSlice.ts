@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { JsonFormArray } from '../data/JsonFormData';
+import { ConvertorsArray } from '../data/ToolsList';
 // Define a type for the slice state
 interface ConvertersState {
   activeTool: number;
@@ -8,8 +8,8 @@ interface ConvertersState {
 
 // Define the initial state using that type
 const initialState: ConvertersState = {
-  activeTool: JsonFormArray[0].id,
-  toolName: JsonFormArray[0].toolName
+  activeTool: ConvertorsArray[0].data[0].id,
+  toolName: ConvertorsArray[0].data[0].title
 };
 
 export const convertersSlice = createSlice({
