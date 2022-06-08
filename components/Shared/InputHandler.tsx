@@ -20,12 +20,6 @@ interface Props {
   setResponseApiData: (res: any) => void;
 }
 
-enum tabValues {
-  text,
-  url,
-  file
-}
-
 const InputHandler = ({ onSubmitInputData, setResponseApiData }: Props) => {
   const [inputData, setInputData] = useState<InputData>({
     inputAsText: '',
