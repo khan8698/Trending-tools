@@ -7,6 +7,7 @@ import { TOOL_ROUTES } from '../../api/constants';
 
 import { useAppSelector } from '@hooks/useAppSelector';
 import { ConvertorsArray } from '../../data/ToolsList';
+import { text } from 'node:stream/consumers';
 
 type InputData = {
   inputAsText: string;
@@ -25,7 +26,7 @@ const InputHandler = ({ onSubmitInputData, setResponseApiData }: Props) => {
     inputAsURL: '',
     inputAsFile: ''
   });
-  const [tab, setTab] = useState('text');
+  const [tab, setTab] = useState<string>('text');
   const { toolName } = useAppSelector(state => state.converters);
   let apiUrlEndPoint = TOOL_ROUTES[toolName][tab];
 

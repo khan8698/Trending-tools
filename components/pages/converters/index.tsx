@@ -12,9 +12,9 @@ import { useAppDispatch } from '@hooks/useAppDispatch';
 import { setActiveTool, setToolName } from '@store/convertersSlice';
 
 export default function HorizontalLinearStepper() {
-  const [activeStep, setActiveStep] = useState(0);
-  const [nextBtnActive, setNextBtnActive] = useState(true);
-  const [responseDataDownload, setResponseDataDownload] = useState('');
+  const [activeStep, setActiveStep] = useState<number>(0);
+  const [nextBtnActive, setNextBtnActive] = useState<boolean>(true);
+  const [responseDataDownload, setResponseDataDownload] = useState<string>('');
 
   const { toolName, activeTool } = useAppSelector(state => state.converters);
   const dispatch = useAppDispatch();
@@ -32,9 +32,7 @@ export default function HorizontalLinearStepper() {
     );
   }, [activeTool, toolName]);
 
-  const onNavigationHandler = () => {
-    
-  }
+  const onNavigationHandler = () => {};
 
   const onSubmitInputData = (inputData: any) => {
     if (

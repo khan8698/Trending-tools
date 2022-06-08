@@ -1,6 +1,5 @@
-// import withRedux from "next-redux-wrapper";
 import { Provider } from 'react-redux';
-import {store} from '../store/store';
+import {store} from '@store/store';
 import Head from 'next/head';
 import Router from 'next/router';
 import NProgress from 'nprogress';
@@ -8,7 +7,7 @@ import 'nprogress/nprogress.css';
 import React, { ReactElement, useEffect } from 'react';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { makeStore } from '@store/index';
+// import { makeStore } from '@store/index';
 import '../styles/app.scss';
 import '../styles/all.css';
 
