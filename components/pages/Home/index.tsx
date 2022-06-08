@@ -6,7 +6,6 @@ import data from '@data/ToolsList';
 import AppFooter from '@components/Shared/Footer';
 
 const HomePage: FC = () => {
-  console.log(Object.values(data));
   return (
     <div className="wrapper">
       <AppHeader />

@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { ConvertorsArray } from '../data/ToolsList';
+import { ConvertorsArray } from '@data/ToolsList';
 // Define a type for the slice state
 interface ConvertersState {
   activeTool: number;
