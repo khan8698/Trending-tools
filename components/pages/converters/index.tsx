@@ -9,28 +9,32 @@ import StepperMaterial from '@components/Shared/stepper/Stepper';
 
 import { useAppSelector } from '@hooks/useAppSelector';
 import { useAppDispatch } from '@hooks/useAppDispatch';
-import { setActiveTool, setToolName } from 'toolkitStore/convertersSlice';
+import { setActiveTool, setToolName } from '@store/convertersSlice';
 
 export default function HorizontalLinearStepper() {
-  // const [activeTab, setActiveTab] = useState(JsonFormArray[0].id);
-  // const [toolName, setToolName] = useState(JsonFormArray[0].toolName);
-
   const [activeStep, setActiveStep] = useState(0);
   const [nextBtnActive, setNextBtnActive] = useState(true);
+  const [responseDataDownload, setResponseDataDownload] = useState('');
 
   const { toolName, activeTool } = useAppSelector(state => state.converters);
   const dispatch = useAppDispatch();
 
   let jsonForm = JsonFormArray.filter(
-    json => activeTool === json.id && toolName === json.toolName
+    dynamicForm =>
+      activeTool === dynamicForm.id && toolName === dynamicForm.toolName
   );
   let [data] = jsonForm;
 
   useEffect(() => {
     jsonForm = JsonFormArray.filter(
-      json => activeTool === json.id && toolName === json.toolName
+      dynamicForm =>
+        activeTool === dynamicForm.id && toolName === dynamicForm.toolName
     );
   }, [activeTool, toolName]);
+
+  const onNavigationHandler = () => {
+    
+  }
 
   const onSubmitInputData = (inputData: any) => {
     if (
@@ -44,6 +48,10 @@ export default function HorizontalLinearStepper() {
     }
   };
 
+  const setResponseApiData = (res: any) => {
+    setResponseDataDownload(res);
+  };
+
   return (
     <div className="wrapper">
       <AppHeader />
@@ -53,15 +61,18 @@ export default function HorizontalLinearStepper() {
           setNextBtnActive(true);
           dispatch(setActiveTool(subItem.id));
           dispatch(setToolName(subItem.title));
-          // setActiveTab(subItem.id);
-          // setToolName(subItem.title);
         }}
       />
       <div className="main-container">
         <StepperMaterial
-          step1={<InputHandler onSubmitInputData={onSubmitInputData} />}
+          step1={
+            <InputHandler
+              onSubmitInputData={onSubmitInputData}
+              setResponseApiData={setResponseApiData}
+            />
+          }
           step2={<ConverterOptionsSelector formSchema={data?.formSchema} />}
-          step3={<AppFileDownloader />}
+          step3={<AppFileDownloader resposeData={responseDataDownload} />}
           activeStep={activeStep}
           setActiveStep={setActiveStep}
           nextBtnActive={nextBtnActive}

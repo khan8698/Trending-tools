@@ -1,6 +1,6 @@
 // import withRedux from "next-redux-wrapper";
 import { Provider } from 'react-redux';
-import {store} from '../toolkitStore/store';
+import {store} from '../store/store';
 import Head from 'next/head';
 import Router from 'next/router';
 import NProgress from 'nprogress';
